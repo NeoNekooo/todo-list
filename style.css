@@ -12,6 +12,14 @@
     padding: 10px;
 }
 
+h1 {
+    /* font-size: 24px; */
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+
 .wlee{
     width: 100%;
     max-width: 540px;
@@ -59,7 +67,7 @@ input {
     color: white;
 }
 
-button{
+/* button{
     border: none;
     outline: none;
     padding: 16px 50px;
@@ -68,7 +76,65 @@ button{
     border-radius: 20px;
     cursor: pointer;
     color: white;
-}
+} */
+
+/* Container utama */
+.row {
+    display: flex; /* Susunan horizontal */
+    flex-wrap: wrap; /* Elemen akan turun jika ruang tidak cukup */
+    align-items: center; /* Vertikal tengah */
+    justify-content: space-between; /* Ruang antar elemen */
+    gap: 10px; /* Tambahkan jarak antar elemen */
+    width: 100%; /* Pastikan lebar penuh */
+    box-sizing: border-box; /* Untuk menghitung padding dalam lebar elemen */
+    padding: 10px; /* Beri ruang di dalam container */
+  }
+  
+  /* Input box */
+  #addbox {
+    flex: 1; /* Input melebar sesuai sisa ruang */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Pastikan input melebar penuh pada layar kecil */
+    box-sizing: border-box;
+  }
+  
+  /* Button */
+  button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: rgba(234, 187, 98, 0.5);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    flex-shrink: 0; /* Jangan biarkan button mengecil */
+  }
+  
+  button:hover {
+    background-color: rgba(234, 187, 98, 0.8);
+  }
+  
+  /* Responsivitas untuk layar kecil */
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column; /* Elemen ditumpuk vertikal */
+      align-items: stretch; /* Paskan lebar elemen */
+    }
+  
+    #addbox,
+    button {
+      width: 100%; /* Elemen memenuhi lebar container */
+    }
+  
+    button {
+      margin-top: 10px; /* Jarak antar button dan input */
+    }
+  }
+  
 
 ul li {
     list-style: none;
